@@ -1,0 +1,24 @@
+{
+  "name": "indecision-app",
+  "version": "1.0.0",
+  "description": "Simple application to learn React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/Payero/indecision-app.git",
+  "author": "Oscar E. Ganteaume <OGanteaume@LGSInnovations.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Payero/indecision-app/issues"
+  },
+  "homepage": "https://github.com/Payero/indecision-app#readme",
+  "dependencies": {
+    "babel-preset-env": "1.5.2",
+    "babel-preset-react": "6.24.1"
+  },
+  "scripts":{
+    "run-dev": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
+    "run-server": "live-server"
+  }
+}
