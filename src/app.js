@@ -1,26 +1,46 @@
 
 console.log("App is actually running");
 
-var name = "Oscar E. Ganteaume";
-const age = 49;
+var app = {
+  title: "Indecision App",
+  subtitle: "Put your life in my hands"
+};
 
-var templateTwo = (
-  <div>
-    <h1>{name}</h1>
-    <p>Age: {age}</p>
-    <p>Location: Dulles, VA</p>
-  </div>
-);
+var user = {
+  name: 'Oscar',
+  age: 49,
+  location: "In the office"
+};
 
 var template = (
   <div>
-    <h1>Indecision App</h1>
-    <h2>Hi: {name}! </h2>
-    <p>This is some info</p>
+    <h1>{app.title}</h1>
+    <h2>{app.subtitle} </h2>
     <ol>
       <li>Item One</li>
       <li>Item Two</li>
     </ol>
+  </div>
+);
+
+function getLocation(location)
+{
+  if( location )
+    return <p>Location: {location}</p>;
+  return
+    undefined
+}
+
+function getAge( age )
+{
+  if( age && age >= 18 )
+    return <p>Age: {age}</p>
+}
+var templateTwo = (
+  <div>
+    <h1>Name: {user.name ? user.name : "No Name Provided"}</h1>
+    {user.age >= 18 && <p>Age: {user.age}</p> }
+    {getLocation(user.location)}
   </div>
 );
 
